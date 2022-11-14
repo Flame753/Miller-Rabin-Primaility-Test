@@ -84,8 +84,8 @@ class JsonFile:
 
 def main():
     # Numbers to calculate the decimal represented for a number to be likely prime.
-    upper_bound = 30
-    lower_bound = 2
+    upper_bound = 100000
+    lower_bound = 85000
     
     # Setting up a location to store the data found
     file = JsonFile("output.json")
@@ -104,7 +104,7 @@ def main():
             file.data.update({str(n): how_likely_prime(n)})
         
         n_error_present = float(file.data.get(str(n)))
-        # print(n, n_error_present)  # Testing line that show what number the script is on
+        #print(n, n_error_present)  # Testing line that show what number the script is on
         
         # Finding the 10 highest error percentages
         if n_error_present >= 0.001:
