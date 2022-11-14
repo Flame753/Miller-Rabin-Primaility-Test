@@ -29,14 +29,6 @@ def find_components(n:int) -> tuple:
 # It return false if n (the candidate #) is composite and return true if prime. 
 # u is the number of trailing zero in the binary represented of n - 1.
 # z is the output of the modules n.
-# def is_likely_prime(n:int, z:int, u:int)-> bool:
-#     if z != 1 and z != n-1:
-#         for _ in range(u):
-#             z = (z**2)%n
-#             if z == 1: return False
-#         if z != (n-1): return False
-#     return True
-
 def is_likely_prime(n:int, z:int, u:int)-> bool:
     if z != 1 and z != n-1:
         for _ in range(u):
